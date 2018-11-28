@@ -64,10 +64,8 @@ class StorageHandler: NSObject {
     fileprivate func resetDataBase(_ value:String,forkey key:String){
     }
     fileprivate func resetKeyChainValue(_ value:String,forkey key:String){
-        
         let keychain = KeychainItemWrapper(identifier: key, accessGroup:nil);
         keychain?.resetKeychainItem();
-
     }
     fileprivate func resetUserDefault(_ value:String,forkey key:String){
         UserDefaults.standard.removeObject(forKey: key)

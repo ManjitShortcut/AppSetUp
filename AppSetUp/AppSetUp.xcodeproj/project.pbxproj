@@ -18,7 +18,9 @@
 		1A0880D321AF311500C138D4 /* ApiIntegetionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0880CB21AF311500C138D4 /* ApiIntegetionProtocol.swift */; };
 		1A0880D421AF311500C138D4 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0880CC21AF311500C138D4 /* ApiHandler.swift */; };
 		1A0880D721AF319C00C138D4 /* StorageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0880D621AF319C00C138D4 /* StorageHandler.swift */; };
-		1A0880DE21AF32E000C138D4 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0880DB21AF32E000C138D4 /* KeychainItemWrapper.m */; };
+		1A0880ED21AF39C800C138D4 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0880EC21AF39C800C138D4 /* KeychainItemWrapper.m */; };
+		1A0880F221AF41D400C138D4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0880EF21AF41D400C138D4 /* Reachability.m */; };
+		1A0880F321AF41D400C138D4 /* APPReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0880F021AF41D400C138D4 /* APPReachability.swift */; };
 		1A67A9D921A4B4AB000708C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A67A9D821A4B4AB000708C3 /* AppDelegate.swift */; };
 		1A67A9DB21A4B4AB000708C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A67A9DA21A4B4AB000708C3 /* ViewController.swift */; };
 		1A67A9DE21A4B4AB000708C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A67A9DC21A4B4AB000708C3 /* Main.storyboard */; };
@@ -57,9 +59,13 @@
 		1A0880CB21AF311500C138D4 /* ApiIntegetionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiIntegetionProtocol.swift; sourceTree = "<group>"; };
 		1A0880CC21AF311500C138D4 /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		1A0880D621AF319C00C138D4 /* StorageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageHandler.swift; sourceTree = "<group>"; };
-		1A0880DB21AF32E000C138D4 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
-		1A0880DC21AF32E000C138D4 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
-		1A0880DD21AF32E000C138D4 /* BMPuls-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BMPuls-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A0880DF21AF359800C138D4 /* AppSetUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppSetUp.entitlements; sourceTree = "<group>"; };
+		1A0880E921AF39C700C138D4 /* AppSetUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppSetUp-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A0880EB21AF39C800C138D4 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		1A0880EC21AF39C800C138D4 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		1A0880EF21AF41D400C138D4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1A0880F021AF41D400C138D4 /* APPReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPReachability.swift; sourceTree = "<group>"; };
+		1A0880F121AF41D400C138D4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1A67A9D521A4B4AB000708C3 /* AppSetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A67A9D821A4B4AB000708C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A67A9DA21A4B4AB000708C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,27 +180,45 @@
 		1A0880D821AF32BA00C138D4 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
-				1A0880D921AF32BA00C138D4 /* Utils */,
+				1A0880E321AF39A200C138D4 /* Utils */,
 			);
 			path = Resouces;
 			sourceTree = "<group>";
 		};
-		1A0880D921AF32BA00C138D4 /* Utils */ = {
+		1A0880E021AF394E00C138D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1A0880DA21AF32E000C138D4 /* KeyChainWrapper */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A0880E321AF39A200C138D4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1A0880EE21AF41D400C138D4 /* Reachability */,
+				1A0880E421AF39A200C138D4 /* KeyChainWrapper */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		1A0880DA21AF32E000C138D4 /* KeyChainWrapper */ = {
+		1A0880E421AF39A200C138D4 /* KeyChainWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				1A0880DB21AF32E000C138D4 /* KeychainItemWrapper.m */,
-				1A0880DC21AF32E000C138D4 /* KeychainItemWrapper.h */,
-				1A0880DD21AF32E000C138D4 /* BMPuls-Bridging-Header.h */,
+				1A0880EB21AF39C800C138D4 /* KeychainItemWrapper.h */,
+				1A0880EC21AF39C800C138D4 /* KeychainItemWrapper.m */,
+				1A0880E921AF39C700C138D4 /* AppSetUp-Bridging-Header.h */,
 			);
 			path = KeyChainWrapper;
+			sourceTree = "<group>";
+		};
+		1A0880EE21AF41D400C138D4 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				1A0880F121AF41D400C138D4 /* Reachability.h */,
+				1A0880EF21AF41D400C138D4 /* Reachability.m */,
+				1A0880F021AF41D400C138D4 /* APPReachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		1A67A9CC21A4B4AB000708C3 = {
@@ -204,6 +228,7 @@
 				1A67A9EC21A4B4AD000708C3 /* AppSetUpTests */,
 				1A67A9F721A4B4AD000708C3 /* AppSetUpUITests */,
 				1A67A9D621A4B4AB000708C3 /* Products */,
+				1A0880E021AF394E00C138D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +245,7 @@
 		1A67A9D721A4B4AB000708C3 /* AppSetUp */ = {
 			isa = PBXGroup;
 			children = (
+				1A0880DF21AF359800C138D4 /* AppSetUp.entitlements */,
 				1A0880D821AF32BA00C138D4 /* Resouces */,
 				1A0880D521AF313300C138D4 /* StroageHandler */,
 				1A0880C121AF311500C138D4 /* Networkhandler */,
@@ -321,6 +347,15 @@
 				TargetAttributes = {
 					1A67A9D421A4B4AB000708C3 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.AutoFillCredentialProvider = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					1A67A9E821A4B4AD000708C3 = {
 						CreatedOnToolsVersion = 10.1;
@@ -386,15 +421,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A0880CE21AF311500C138D4 /* ErrorResponseResult.swift in Sources */,
-				1A0880DE21AF32E000C138D4 /* KeychainItemWrapper.m in Sources */,
+				1A0880ED21AF39C800C138D4 /* KeychainItemWrapper.m in Sources */,
 				1A67A9DB21A4B4AB000708C3 /* ViewController.swift in Sources */,
 				1A0880D321AF311500C138D4 /* ApiIntegetionProtocol.swift in Sources */,
+				1A0880F321AF41D400C138D4 /* APPReachability.swift in Sources */,
 				1A0880CD21AF311500C138D4 /* ResponseResult.swift in Sources */,
 				1A0880D021AF311500C138D4 /* NetWorkAcessProrocol.swift in Sources */,
 				1A0880D221AF311500C138D4 /* APIConfiguration.swift in Sources */,
 				1A0880D421AF311500C138D4 /* ApiHandler.swift in Sources */,
 				1A67A9D921A4B4AB000708C3 /* AppDelegate.swift in Sources */,
 				1A0880D721AF319C00C138D4 /* StorageHandler.swift in Sources */,
+				1A0880F221AF41D400C138D4 /* Reachability.m in Sources */,
 				1A0880CF21AF311500C138D4 /* DefaultUrlSession.swift in Sources */,
 				1A0880BF21AF30FA00C138D4 /* PinCodeView.swift in Sources */,
 				1A0880D121AF311500C138D4 /* NetWorkHandler.swift in Sources */,
@@ -572,6 +609,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppSetUp/Info.plist;
@@ -583,6 +621,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AppSetUp.AppSetUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppSetUp/Resouces/Utils/KeyChainWrapper/AppSetUp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -592,6 +632,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppSetUp/Info.plist;
@@ -603,6 +644,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AppSetUp.AppSetUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppSetUp/Resouces/Utils/KeyChainWrapper/AppSetUp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
